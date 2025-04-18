@@ -30,7 +30,7 @@ jobs:
         run: |
           sudo apt install -y git devscripts equivs config-package-dev debhelper-compat golang curl wget
           wget https://archive.ubuntu.com/ubuntu/pool/universe/n/ncurses/libtinfo5_6.3-2ubuntu0.1_amd64.deb
-          sudo apt install libtinfo5_6.3-2ubuntu0.1_amd64.deb -y
+          sudo apt install ./libtinfo5_6.3-2ubuntu0.1_amd64.deb -y
 
       # Runs a set of commands using the runners shell
       - name: Clone Cuttlefish and Build
