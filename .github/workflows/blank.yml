@@ -44,7 +44,9 @@ jobs:
           cd android-cuttlefish
           tools/buildutils/build_packages.sh
           cd ../
+          mkdir debs
+          cp android-cuttlefish/*.deb debs/
       - uses: actions/upload-artifact@v4
         with:
           name: release
-          path: android-cuttlefish/
+          path: debs/
