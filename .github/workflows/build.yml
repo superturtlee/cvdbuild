@@ -31,6 +31,9 @@ jobs:
           sudo apt update
           sudo apt install -y git devscripts equivs config-package-dev debhelper-compat golang curl wget
           sudo apt install apt-transport-https curl gnupg -y
+          wget http://archive.ubuntu.com/ubuntu/pool/universe/n/ncurses/libtinfo5_6.3-2_amd64.deb
+          sudo apt install ./libtinfo5_6.3-2_amd64.deb
+          rm libtinfo5_6.3-2_amd64.deb
           curl -fsSL https://bazel.build/bazel-release.pub.gpg | gpg --dearmor >bazel-archive-keyring.gpg
           sudo mv bazel-archive-keyring.gpg /usr/share/keyrings
           echo "deb [arch=amd64 signed-by=/usr/share/keyrings/bazel-archive-keyring.gpg] https://storage.googleapis.com/bazel-apt stable jdk1.8" | sudo tee /etc/apt/sources.list.d/bazel.list
