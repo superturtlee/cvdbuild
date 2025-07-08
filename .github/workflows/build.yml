@@ -42,6 +42,7 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Clone Cuttlefish and Build
         run: |
+          sudo rm -rf /usr/local/lib/android
           sudo apt purge -y firefox google-chrome-stable microsoft-edge-stable
           git clone https://github.com/google/android-cuttlefish
           cd android-cuttlefish
